@@ -2,47 +2,38 @@
   <div class="border p-3">
     <h2>Filters</h2>
     <form class="row">
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="region" class="form-label">Region</label>
         <select name="region" id="region" class="form-select">
           <option value="1">Teste</option>
           <option value="2">Teste</option>
         </select>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="species" class="form-label">Species</label>
         <select name="species" id="species" class="form-select">
           <option value="1">Teste</option>
           <option value="2">Teste</option>
         </select>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="conservationStatus" class="form-label">Conservation Status</label>
         <select name="conservationStatus" id="conservationStatus" class="form-select">
           <option value="1">Teste</option>
           <option value="2">Teste</option>
         </select>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="waterTemperature" class="form-label">Water Temperature</label>
-        <select name="waterTemperature" id="waterTemperature" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
-        </select>
+          <input type="text" class="form-control" id="waterTemperature">
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="ph" class="form-label">pH</label>
-        <select name="ph" id="ph" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
-        </select>
+        <input type="text" class="form-control" id="ph">
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <label for="pollutionLevels" class="form-label">Pollution Levels</label>
-        <select name="pollutionLevels" id="pollutionLevels" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
-        </select>
+        <input type="text" class="form-control" id="pollutionLevels">
       </div>
       <div>
         <button type="button" class="btn btn-primary mt-3">Search</button>
@@ -58,13 +49,23 @@
       <thead>
         <tr>
           <th>Region</th>
-          <th>Species</th>
-          <th>Conservation Status</th>
           <th>Water Temperature</th>
           <th>pH</th>
           <th>Pollution Levels</th>
+          <th>Species</th>
+          <th>Conservation Status</th>
         </tr>
       </thead>
+      <tbody>
+          <tr *ngFor="let ocean of oceanData">
+            <td>{{ocean.region}}</td>
+            <td>{{ocean.waterTemperature}}</td>
+            <td>{{ocean.ph}}</td>
+            <td>{{ocean.pollutionLevels}}</td>
+            <td *ngFor="let especie of species">{{especie.name}}, {{especie.status}}</td>
+            <td *ngFor="let projeto of conservationProjects">{{projeto.projectName}}, {{projeto.projectType}}, {{projeto.contributionType}}</td>
+          </tr>
+      </tbody>
     </table>
   </div>
 </section>
