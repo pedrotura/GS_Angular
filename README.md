@@ -1,27 +1,21 @@
-# GsAngular
+# Global Solution - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+## Integrantes
 
-## Development server
+- Gabriel Vidoi Mendonça - RM: 94226
+- Pedro Henrique Gonçalves Tura - RM: 93391
+- Rafael Gualdieri Pinheiro - RM: 93036
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Rodando o projeto
 
-## Code scaffolding
+Para rodar o projeto, basta acessar os arquivos pelo Visual Studio Code, abrir o terminal de comandos e executar a instrução `ng serve`. Após isso, é necessário seguir o link `http://localhost:4200` para abrir a página.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Imagens
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Imagem 1](images/print01.png)
+![Imagem 2](images/print02.png)
+![Imagem 3](images/print03.png)
+![Imagem 4](images/print04.png)
+![Imagem 5](images/print05.png)
+![Imagem 6](images/print06.png)
+![Imagem 7](images/print07.png)
