@@ -1,31 +1,28 @@
 <section class="m-5">
-  <div class="border p-3">
+  <div class="border rounded p-3">
     <h2>Filters</h2>
     <form class="row">
       <div class="col-md-2 col-sm-4">
         <label for="region" class="form-label">Region</label>
         <select name="region" id="region" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
+          <option value="all">All</option>
         </select>
       </div>
       <div class="col-md-2 col-sm-4">
         <label for="species" class="form-label">Species</label>
         <select name="species" id="species" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
+          <option value="all">All</option>
         </select>
       </div>
       <div class="col-md-2 col-sm-4">
         <label for="conservationStatus" class="form-label">Conservation Status</label>
         <select name="conservationStatus" id="conservationStatus" class="form-select">
-          <option value="1">Teste</option>
-          <option value="2">Teste</option>
+          <option value="all">All</option>
         </select>
       </div>
       <div class="col-md-2 col-sm-4">
         <label for="waterTemperature" class="form-label">Water Temperature</label>
-          <input type="text" class="form-control" id="waterTemperature">
+        <input type="text" class="form-control" id="waterTemperature">
       </div>
       <div class="col-md-2 col-sm-4">
         <label for="ph" class="form-label">pH</label>
@@ -43,28 +40,40 @@
 </section>
 
 <section class="mx-5">
-  <div class="border p-3">
+  <div class="border rounded p-3">
     <h2>Data Table</h2>
-    <table class="table table-striped">
+    <table class="border table table-striped">
       <thead>
-        <tr>
+        <tr class="text-center">
           <th>Region</th>
-          <th>Water Temperature</th>
-          <th>pH</th>
-          <th>Pollution Levels</th>
           <th>Species</th>
           <th>Conservation Status</th>
+          <th>Pollution Levels</th>
+          <th>Water Temperature</th>
+          <th>pH</th>
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let ocean of oceanData">
-            <td>{{ocean.region}}</td>
-            <td>{{ocean.waterTemperature}}</td>
-            <td>{{ocean.ph}}</td>
-            <td>{{ocean.pollutionLevels}}</td>
-            <td *ngFor="let especie of species">{{especie.name}}, {{especie.status}}</td>
-            <td *ngFor="let projeto of conservationProjects">{{projeto.projectName}}, {{projeto.projectType}}, {{projeto.contributionType}}</td>
-          </tr>
+        <tr *ngFor="let ocean of oceanData" class="text-center align-middle">
+          <td>{{ocean.regiao}}</td>
+          <td>
+            <ul *ngFor="let especie of ocean.especies" class="d-flex justify-content-center">
+              <li class="list-group-item">
+                {{especie.nome}}, {{especie.status}}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul *ngFor="let projeto of ocean.projetosConservacao" class="d-flex">
+              <li class="list-group-item">
+                {{projeto.nomeProjeto}} - {{projeto.tipoProjeto}} - {{projeto.tipoParticipacao}}
+              </li>
+            </ul>
+          </td>
+          <td>{{ocean.temperaturaAgua}}</td>
+          <td>{{ocean.pH}}</td>
+          <td>{{ocean.nivelPoluicao}}</td>
+        </tr>
       </tbody>
     </table>
   </div>

@@ -13,10 +13,6 @@ export class FilterService {
 
   constructor(private http: HttpClient) { }
 
-  getOceanData():Observable<any[]> {
-    return this.http.get<any[]>(this.oceanDataUrl);
-  }
-
   listar():Observable<OceanData[]> {
     return this.http.get<OceanData[]>(this.oceanDataUrl) as Observable<OceanData[]>;
   }

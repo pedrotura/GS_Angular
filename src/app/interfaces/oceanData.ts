@@ -1,11 +1,11 @@
-import { ConservationProject } from './conservationProject';
-import { Species } from './species';
+import { ProjetoConservacao } from './projetoConservacao';
+import { Especies } from './especies';
 
 export interface OceanData {
-  region?: string,
-  waterTemperature: number,
-  ph: number,
-  pollutionLevels?: string,
-  species: Species[],
-  conservationProjects: ConservationProject[]
+  regiao?: string,
+  temperaturaAgua: number,
+  pH: number,
+  nivelPoluicao?: string,
+  especies?: Especies[],
+  projetosConservacao?: ProjetoConservacao[]
 }
