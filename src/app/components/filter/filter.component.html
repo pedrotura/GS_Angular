@@ -30,27 +30,29 @@
       </div>
       <div class="col-md-2 col-sm-4">
         <label for="pollutionLevels" class="form-label">Pollution Levels</label>
-        <input type="text" class="form-control" id="pollutionLevels">
+        <select name="pollutionLevels" id="pollutionLevels" class="form-select">
+          <option value="all">All</option>
+        </select>
       </div>
       <div>
-        <button type="button" class="btn btn-primary mt-3">Search</button>
+        <button id="btnSearch" type="button" class="btn btn-primary mt-3">Search</button>
       </div>
     </form>
   </div>
 </section>
 
-<section class="mx-5">
-  <div class="border rounded p-3">
+<section class="mx-5 mb-5">
+  <div class="border rounded p-3 pb-0">
     <h2>Data Table</h2>
     <table class="border table table-striped">
       <thead>
         <tr class="text-center">
           <th>Region</th>
           <th>Species</th>
-          <th>Conservation Status</th>
-          <th>Pollution Levels</th>
+          <th>Conservation Projects</th>
           <th>Water Temperature</th>
           <th>pH</th>
+          <th>Pollution Levels</th>
         </tr>
       </thead>
       <tbody>
